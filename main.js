@@ -5,10 +5,15 @@ const loginBtn = document.getElementById('login-btn');
 const username = document.getElementById('username');
 const password = document.getElementById('password');
 const imageContainer = document.getElementById('image-container');
+const imageElement = document.getElementById('image');
 
 // Credenciales de acceso (puedes cambiarlas)
 const validUsername = 'admin';
 const validPassword = 'contraseña';
+
+// Rutas de las imágenes
+const imagePaths = ['imagen1.jpg', 'imagen2.jpg'];
+let currentImageIndex = 0;
 
 // Mostrar el popup de inicio de sesión
 window.onload = function() {
@@ -28,7 +33,16 @@ loginBtn.addEventListener('click', () => {
 
         // Mostrar la imagen
         imageContainer.classList.remove('hidden');
+
+        // Iniciar el cambio de imágenes
+        setInterval(changeImage, 20000);
     } else {
         alert('Usuario o contraseña incorrectos');
     }
 });
+
+// Función para cambiar la imagen
+function changeImage() {
+    currentImageIndex = (currentImageIndex + 1) % imagePaths.length;
+    imageElement.src = imagePaths[currentImageIndex];
+}
