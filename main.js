@@ -31,8 +31,8 @@ loginBtn.addEventListener('click', () => {
         // Ocultar el popup de inicio de sesión
         loginPopup.style.display = 'none';
 
-        // Mostrar la imagen
-        imageContainer.classList.remove('hidden');
+        // Mostrar el contenedor de la imagen
+        imageContainer.style.display = 'flex';
 
         // Iniciar el cambio de imágenes
         setInterval(changeImage, 20000);
