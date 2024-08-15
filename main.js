@@ -56,9 +56,3 @@ function changeImage() {
     currentImageIndex = (currentImageIndex + 1) % imagePaths.length;
     imageElement.src = imagePaths[currentImageIndex];
 }
-
-// Función para cambiar la imagen
-function changeImage() {
-    currentImageIndex = (currentImageIndex + 1) % imagePaths.length;
-    imageElement.src = imagePaths[currentImageIndex];
-}
