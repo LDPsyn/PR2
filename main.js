@@ -9,7 +9,7 @@ const imageElement = document.getElementById('image');
 
 // Credenciales de acceso (puedes cambiarlas)
 const validUsername = 'admin';
-const validPassword = 'contraseña';
+const validPassword = '2145syn';
 
 // Rutas de las imágenes
 const imagePaths = ['imagen1.png', 'imagen2.png'];
