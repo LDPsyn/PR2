@@ -9,7 +9,7 @@ const imageElement = document.getElementById('image');
 
 // Credenciales de acceso (puedes cambiarlas)
 const validUsername = 'admin';
-const validPassword = '376,5syn';
+const validPassword = 'contraseña';
 
 // Rutas de las imágenes
 const imagePaths = ['imagen1.png', 'imagen2.png'];
@@ -44,7 +44,5 @@ loginBtn.addEventListener('click', () => {
 // Función para cambiar la imagen
 function changeImage() {
     currentImageIndex = (currentImageIndex + 1) % imagePaths.length;
-    imageElement.src = imagePaths[currentImageIndex];
-}ImageIndex + 1) % imagePaths.length;
     imageElement.src = imagePaths[currentImageIndex];
 }
