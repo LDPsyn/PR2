@@ -12,7 +12,7 @@ const validUsername = 'admin';
 const validPassword = 'contraseña';
 
 // Rutas de las imágenes
-const imagePaths = ['imagen1.jpg', 'imagen2.jpg'];
+const imagePaths = ['imagen1.png', 'imagen2.png'];
 let currentImageIndex = 0;
 
 // Mostrar el popup de inicio de sesión
