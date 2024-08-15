@@ -6,13 +6,14 @@ const username = document.getElementById('username');
 const password = document.getElementById('password');
 const imageContainer = document.getElementById('image-container');
 const imageElement = document.getElementById('image');
+const loadingAnimation = document.getElementById('loading-animation');
 
 // Credenciales de acceso (puedes cambiarlas)
 const validUsername = 'admin';
-const validPassword = '2145syn';
+const validPassword = 'contraseña';
 
 // Rutas de las imágenes
-const imagePaths = ['imagen1.png', 'imagen2.png'];
+const imagePaths = ['imagen1.jpg', 'imagen2.jpg'];
 let currentImageIndex = 0;
 
 // Mostrar el popup de inicio de sesión
@@ -31,15 +32,30 @@ loginBtn.addEventListener('click', () => {
         // Ocultar el popup de inicio de sesión
         loginPopup.style.display = 'none';
 
-        // Mostrar el contenedor de la imagen
-        imageContainer.style.display = 'flex';
+        // Mostrar la animación de carga
+        loadingAnimation.style.display = 'flex';
 
-        // Iniciar el cambio de imágenes
-        setInterval(changeImage, 20000);
+        // Simular una carga de 2 segundos
+        setTimeout(() => {
+            // Ocultar la animación de carga
+            loadingAnimation.style.display = 'none';
+
+            // Mostrar el contenedor de la imagen
+            imageContainer.style.display = 'flex';
+
+            // Iniciar el cambio de imágenes
+            setInterval(changeImage, 20000);
+        }, 2000);
     } else {
         alert('Usuario o contraseña incorrectos');
     }
 });
+
+// Función para cambiar la imagen
+function changeImage() {
+    currentImageIndex = (currentImageIndex + 1) % imagePaths.length;
+    imageElement.src = imagePaths[currentImageIndex];
+}
 
 // Función para cambiar la imagen
 function changeImage() {
