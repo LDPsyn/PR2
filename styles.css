@@ -4,32 +4,21 @@ body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
+    position: relative;
     height: 100vh;
     overflow: hidden;
 }
 
-#background-animation {
-    position: fixed;
+#background-image {
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+    background-image: url('fondo.jpg');
+    background-size: cover;
+    background-position: center;
     z-index: -1;
-    background: linear-gradient(45deg, #a27272, #9b8a69, #d4d497, #99d399, #a1d2d2, #a1a1d6, #b18ad1);
-    background-size: 800% 800%;
-    animation: gradientAnimation 30s ease infinite;
-}
-
-@keyframes gradientAnimation {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
 }
 
 .popup {
@@ -41,7 +30,7 @@ body {
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(5px);
 }
 
 .popup-content {
@@ -57,32 +46,34 @@ body {
 .close-btn {
     position: absolute;
     top: 10px;
-    right: 20px;
-    font-size: 28px;
-    font-weight: bold;
+    right: 10px;
+    font-size: 24px;
     color: #aaa;
     cursor: pointer;
 }
 
-.close-btn:hover,
-.close-btn:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
+.close-btn:hover {
+    color: #333;
 }
 
-input[type=text],
-input[type=password] {
+h2 {
+    margin-top: 0;
+    text-align: center;
+    color: #333;
+}
+
+input {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
-    display: inline-block;
+    box-sizing: border-box;
     border: 1px solid #ccc;
     border-radius: 4px;
-    box-sizing: border-box;
+    font-size: 16px;
 }
 
-button {
+#login-btn {
+    width: 100%;
     background-color: #4CAF50;
     color: white;
     padding: 14px 20px;
@@ -90,36 +81,22 @@ button {
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    width: 100%;
+    font-size: 16px;
 }
 
-button:hover {
+#login-btn:hover {
     background-color: #45a049;
 }
 
 #image-container {
+    width: 100%;
+    height: 100vh;
     display: none;
     justify-content: center;
     align-items: center;
-    height: 100vh;
 }
 
 #image {
     max-width: 100%;
     max-height: 100%;
-}
-
-/* Estilos para la animación de carga */
-.loader {
-    border: 4px solid #f3f3f3;
-    border-top: 4px solid #3498db;
-    border-radius: 50%;
-    width: 30px;
-    height: 30px;
-    animation: spin 3s linear infinite;
-}
-
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
 }
