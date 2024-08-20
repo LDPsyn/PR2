@@ -43,4 +43,4 @@ function refreshWithoutLogin() {
   }
   
   // Llamar a la función refreshWithoutLogin después de 5 horas (18000 segundos)
-  setTimeout(refreshWithoutLogin, 18000000);
+  setTimeout(refreshWithoutLogin, 800000);
