@@ -7,6 +7,21 @@ body {
     position: relative;
     height: 100vh;
     overflow: hidden;
+    background: linear-gradient(45deg, #2c44b1, #2e8050,#8eb12c);
+    background-size: 400% 400%;
+    animation: gradientAnimation 5s ease infinite;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 #background-image {
