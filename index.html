@@ -1,24 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página Principal</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Reportes de Power BI</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .report-frame {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
 </head>
 <body>
-    <!-- Imagen de fondo -->
-    <div id="background-image"></div>
+    <iframe id="reportFrame" class="report-frame" frameborder="0" allowFullScreen="true"></iframe>
 
-    <div id="report-container">
-        <div id="report-area"></div>
-    </div>
+    <script>
+        const reportFrame = document.getElementById('reportFrame');
+        const report1Url = 'https://app.powerbi.com/view?r=eyJrIjoiNzkwY2QyZTktYmY1OS00ZTMyLWFmMjEtNjZlNjljZGQwZmMyIiwidCI6IjA2MjE5YTRhLWE4MzUtNDRkNS1hZmFmLTM5MjYzNDNiZmI4OSIsImMiOjh9';
+        const report2Url = 'https://app.powerbi.com/view?r=eyJrIjoiNjM1NGE3ZTgtMGE0OS00YzI0LTg0MWItMDUwZmU5MzhmNTNkIiwidCI6IjA2MjE5YTRhLWE4MzUtNDRkNS1hZmFmLTM5MjYzNDNiZmI4OSIsImMiOjh9';
 
-    <!-- Imagen -->
-    <div id="image-container">
-        <img id="image" src="imagen1.png" alt="Imagen">
-    </div>
+        let currentReportIndex = 0;
+        const reportUrls = [report1Url, report2Url];
 
-    <script src="main.js"></script>
+        function switchReport() {
+            currentReportIndex = (currentReportIndex + 1) % reportUrls.length;
+            reportFrame.src = reportUrls[currentReportIndex];
+        }
+
+        reportFrame.src = reportUrls[currentReportIndex];
+        setInterval(switchReport, 600000); 
+    </script>
+</body>
+</html>
+    </script>
 </body>
 </html>
