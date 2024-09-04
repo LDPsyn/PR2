@@ -24,11 +24,12 @@
 
     <script>
         const reportFrame = document.getElementById('reportFrame');
-        const report1Url = 'https://app.powerbi.com/view?r=eyJrIjoiZjVmMDYwMTUtZDE5YS00NzczLTk4OWYtYTZlNzkzYjljNTBhIiwidCI6IjA2MjE5YTRhLWE4MzUtNDRkNS1hZmFmLTM5MjYzNDNiZmI4OSIsImMiOjh9';
-        const report2Url = 'https://app.powerbi.com/view?r=eyJrIjoiMjVlMDk0M2YtMmYxOC00OGNmLWI2NGYtNTQ2NTFmM2M2Nzc2IiwidCI6IjA2MjE5YTRhLWE4MzUtNDRkNS1hZmFmLTM5MjYzNDNiZmI4OSIsImMiOjh9';
+        const report1Url = 'https://app.powerbi.com/view?r=eyJrIjoiYzY4ZGU2MmEtMTliNC00MGRiLWJlYTYtNzJkNTc2YzQxOTg2IiwidCI6IjA2MjE5YTRhLWE4MzUtNDRkNS1hZmFmLTM5MjYzNDNiZmI4OSIsImMiOjh9';
+        const report2Url = 'https://app.powerbi.com/view?r=eyJrIjoiNjk2OTQ1NjYtYjgxMi00NzgwLWJjZmUtMjlhMWQyNTRlMzg4IiwidCI6IjA2MjE5YTRhLWE4MzUtNDRkNS1hZmFmLTM5MjYzNDNiZmI4OSIsImMiOjh9';
+        const report3Url = 'https://app.powerbi.com/view?r=eyJrIjoiYWQ1MDI1NjgtNGZiNy00YWVkLWI1OWYtYjJmMTViOTcxMzczIiwidCI6IjA2MjE5YTRhLWE4MzUtNDRkNS1hZmFmLTM5MjYzNDNiZmI4OSIsImMiOjh9'; 
 
         let currentReportIndex = 0;
-        const reportUrls = [report1Url, report2Url];
+        const reportUrls = [report1Url, report2Url, report3Url]; // Nuevo reporte agregado al arreglo
 
         function switchReport() {
             currentReportIndex = (currentReportIndex + 1) % reportUrls.length;
@@ -36,10 +37,7 @@
         }
 
         reportFrame.src = reportUrls[currentReportIndex];
-        setInterval(switchReport, 600000); 
-    </script>
-</body>
-</html>
+        setInterval(switchReport, 600000); // Cambiar el reporte cada 10 minutos (600000 milisegundos)
     </script>
 </body>
 </html>
