@@ -26,10 +26,12 @@
         const reportFrame = document.getElementById('reportFrame');
         const report1Url = 'https://app.powerbi.com/view?r=eyJrIjoiYzY4ZGU2MmEtMTliNC00MGRiLWJlYTYtNzJkNTc2YzQxOTg2IiwidCI6IjA2MjE5YTRhLWE4MzUtNDRkNS1hZmFmLTM5MjYzNDNiZmI4OSIsImMiOjh9';
         const report2Url = 'https://app.powerbi.com/view?r=eyJrIjoiNjk2OTQ1NjYtYjgxMi00NzgwLWJjZmUtMjlhMWQyNTRlMzg4IiwidCI6IjA2MjE5YTRhLWE4MzUtNDRkNS1hZmFmLTM5MjYzNDNiZmI4OSIsImMiOjh9';
-        const report3Url = 'https://app.powerbi.com/view?r=eyJrIjoiYWQ1MDI1NjgtNGZiNy00YWVkLWI1OWYtYjJmMTViOTcxMzczIiwidCI6IjA2MjE5YTRhLWE4MzUtNDRkNS1hZmFmLTM5MjYzNDNiZmI4OSIsImMiOjh9'; 
+        const report3Url = 'https://app.powerbi.com/view?r=eyJrIjoiYWQ1MDI1NjgtNGZiNy00YWVkLWI1OWYtYjJmMTViOTcxMzczIiwidCI6IjA2MjE5YTRhLWE4MzUtNDRkNS1hZmFmLTM5MjYzNDNiZmI4OSIsImMiOjh9';
+        const report4Url = 'hhttps://app.powerbi.com/reportEmbed?reportId=eb220f7e-75ff-46ae-bdb3-eae2b2c5a3c9&autoAuth=true&ctid=06219a4a-a835-44d5-afaf-3926343bfb89';
+        const report5Url = 'https://app.powerbi.com/reportEmbed?reportId=eb220f7e-75ff-46ae-bdb3-eae2b2c5a3c9&autoAuth=true&ctid=06219a4a-a835-44d5-afaf-3926343bfb89'; 
 
         let currentReportIndex = 0;
-        const reportUrls = [report1Url, report2Url, report3Url]; // Nuevo reporte agregado al arreglo
+        const reportUrls = [report1Url, report2Url, report3Url, report4Url, report5Url]; // Nuevo reporte agregado al arreglo
 
         function switchReport() {
             currentReportIndex = (currentReportIndex + 1) % reportUrls.length;
